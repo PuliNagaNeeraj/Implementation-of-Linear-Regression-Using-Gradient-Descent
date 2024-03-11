@@ -35,8 +35,7 @@ def linear_regression(X1, y, learning_rate=0.01, num_iters=1000):
     errors = (predictions - y).reshape(-1,1)
     theta -= learning_rate* (1 / len(X1)) * X.T.dot(errors)
   return theta
-```
-```
+
 data = pd.read_csv('50_Startups.csv', header=None)
 print(data.head())
 # Assuming the last column is your target variable 'y' and the preceding column 
@@ -51,8 +50,7 @@ Y1_Scaled = scaler.fit_transform(y)
 print(X1_Scaled)
 print(Y1_Scaled)
 theta = linear_regression(X1_Scaled, Y1_Scaled)
-```
-```
+
 # Predict target value for a new data point
 new_data = np.array([165349.2,136897.8,471784.1]).reshape(-1,1)
 new_Scaled = scaler.fit_transform(new_data)
@@ -64,8 +62,10 @@ print(f"Predicted value: {pre}")
 
 ## Output:
 ![ML-3 1](https://github.com/PuliNagaNeeraj/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/138849173/3c1e3a87-6017-4a53-bda0-52bbeb109620)
+
 ![ML-3 2](https://github.com/PuliNagaNeeraj/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/138849173/e9671b95-4e38-4897-9739-496df6115d76)
 ![ML-3 3](https://github.com/PuliNagaNeeraj/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/138849173/77c98f25-e0ef-4d70-8bb5-b5400528b049)
+
 ![ML-3 4](https://github.com/PuliNagaNeeraj/Implementation-of-Linear-Regression-Using-Gradient-Descent/assets/138849173/02b6b513-85b0-4658-9a29-7aec7a4e5ef1)
 
 
